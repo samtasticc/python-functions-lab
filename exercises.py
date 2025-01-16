@@ -150,10 +150,39 @@
 #
 # Define the function and call it with different sets of numbers to test.
 
-def product(*args):
-    total = 1
-    for arg in args:
-        total *= arg
-    return total
+# def product(*args):
+#     total = 1
+#     for arg in args:
+#         total *= arg
+#     return total
 
-print('Exercise 8:', product(-1, 4), product(2, 5, 5))
+# print('Exercise 8:', product(-1, 4), product(2, 5, 5))
+
+# ------------ EXERCISE 9
+
+# Exercise 9: Basic Calculator
+#
+# Create a function named `basic_calculator` that takes three arguments: 
+# two numbers and a string representing an operation ('add', 'subtract', 'multiply', 'divide'). 
+# Perform the provided operation on the two numbers. In operations where the order of numbers is important, 
+# treat the first parameter as the first operand and the second parameter as the second operand.
+#
+# Examples:
+# basic_calculator(10, 5, 'subtract') should return 5.
+# basic_calculator(10, 5, 'add') should return 15.
+# basic_calculator(10, 5, 'multiply') should return 50.
+# basic_calculator(10, 5, 'divide') should return 2.
+#
+# Define the function and then call it below.
+
+def basic_calculator(num1, num2, operator):
+    if operator == 'subtract':
+        return(num1 - num2)
+    elif operator == 'add':
+        return(num1 + num2)
+    elif operator == 'multiply':
+        return(num1 * num2)
+    else:
+        return(num1 // num2)
+
+print('Exercise 9 Result:', basic_calculator(10, 5, "subtract"), basic_calculator(10, 5, "add"), basic_calculator(10, 5, "multiply"), basic_calculator(10, 5, "divide"))
